@@ -25,3 +25,8 @@ variable "node_groups" {
   description = "Number of nodes groups to create in the cluster"
   default     = 3
 }
+
+variable "transit_encryption_enabled" {
+  description = "Enable transit encryption"
+  default     = true
+}

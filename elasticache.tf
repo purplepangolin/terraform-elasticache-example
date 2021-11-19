@@ -35,6 +35,7 @@ resource "aws_elasticache_replication_group" "default" {
   security_group_ids         = ["${aws_security_group.default.id}"]
   subnet_group_name          = aws_elasticache_subnet_group.default.name
   automatic_failover_enabled = true
+  transit_encryption_enabled = var.transit_encryption_enabled
 
   cluster_mode {
     replicas_per_node_group = 1
